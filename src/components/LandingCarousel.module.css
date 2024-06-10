@@ -1,0 +1,212 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.Carousel {
+  height: 700px;
+  width: 100%;
+}
+
+.PrevIcon {
+  font-size: 50px;
+  z-index: 0;
+}
+.NextIcon {
+  font-size: 50px;
+  z-index: 0;
+}
+
+.Caption {
+  max-width: 100%;
+  width: 100%;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  bottom: auto;
+  margin-top: 120px;
+  width: 100%;
+  display: block;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.Icon {
+  color: rgb(204, 203, 203);
+}
+
+.PrevIcon {
+  display: flex;
+}
+
+.NextIcon {
+  display: flex;
+}
+
+.Top {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 97%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  opacity: 0.99;
+}
+.Heading {
+
+
+  justify-content: center;
+  text-align: center;
+}
+
+.Heading p {
+  font-size: 50px;
+  font-weight: 600;
+  color: #ffffff;
+  animation: fadeIn 5s;
+  position: relative;
+  animation-name: heading;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+@keyframes heading {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Description p {
+  font-size: 26px;
+  font-weight: 200;
+  color: #ffffff;
+  animation: fadeIn 5s;
+  position: relative;
+  animation-name: description;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+@keyframes description {
+  from {
+    top: 20px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.ButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation-name: button;
+  position: relative;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+@keyframes button {
+  from {
+    top: 50px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.Button {
+  z-index: 1;
+  align-items: center;
+  width: fit-content;
+}
+
+.Button:hover {
+  background-color: red;
+}
+
+.ButtonText {
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 600px) {
+  .Carousel {
+    height: 500px;
+    margin-left: 20px;
+  }
+
+  .PrevIcon {
+    display: none;
+  }
+
+  .NextIcon {
+    display: none;
+  }
+
+  .Caption {
+    margin-left: -20px;
+    width: 100%;
+    display: block;
+    align-items: flex-start;
+    align-content: flex-start;
+    text-align: start;
+    z-index: 2;
+  }
+
+  .Heading p {
+    font-size: 23px;
+    font-weight: 400;
+    color: #ffffff;
+  }
+
+  .Description p {
+    font-size: 16px;
+    font-weight: 200;
+  }
+
+  .Button {
+    display: flex;
+  }
+}
