@@ -1,0 +1,4 @@
+
+.Title{
+  @apply flex text-2xl text-black justify-center font-bold antialiased
+}

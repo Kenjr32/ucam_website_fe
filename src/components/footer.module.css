@@ -1,0 +1,46 @@
+.Container {
+ position: relative;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ background-color: black;
+ color: white;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ padding: 30px;
+}
+.TextContainer {
+ position: relative;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ background-color: black;
+ color: white;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ padding: 0px;
+}
+
+.UCAMTextAndDate {
+ font-weight: 600;
+}
+
+.Icon {
+ display: flex;
+ justify-items: center;
+ justify-content: center;
+ color:red;
+ font-size: 24px;
+}
+.IndividualIcon{
+    padding:0px 8px;
+    color:red;
+    font-size: 24px;
+}
+.IndividualIcon:hover{
+    padding:0px 8px;
+    color:red;
+    font-size: 30px;
+}

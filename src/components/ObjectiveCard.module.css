@@ -1,0 +1,32 @@
+.Container {
+  margin: -6px -20px;
+  display: flex;
+}
+.Card {
+  height: 100%;
+  width: 100%;
+  min-height: 250px;
+  background-color: white;
+  padding: 20px;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: -2px;
+}
+
+.Number {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #eb0f0f;
+  margin-bottom: -20px;
+}
+
+.Objective {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
