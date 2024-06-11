@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Grid from "@mui/material/Grid";
-import Cover from "../components/cover";
+
 import Box from "../components/box";
 import Styles from "./home.module.css";
 import Image from "../components/image/image";
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <div>
-        <Cover />
+  
 
         <section className="w-full text-black py-20 bg-white ">
           <div className="w-full max-w-7xl m-auto items-center flex justify-center">

@@ -1,17 +1,17 @@
 import Header from "./header";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Image from "./image/image";
-import {  useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
 import { Carousel } from "react-responsive-carousel";
 
-
 import Slide1 from "../assets/images/slides/slide_01.jpg";
 import Slide2 from "../assets/images/slides/slide_02.jpg";
 import Slide3 from "../assets/images/slides/slide_03.jpg";
-
+import CoverImg from "../assets/images/cover/darken_cap.jpeg";
 import Styles from "./LandingCarousel.module.css";
+
 
 const Cover = () => {
   const router = useLocation();
@@ -58,14 +58,14 @@ const Cover = () => {
               );
             }}
             width="100%"
-            className="relative w-[100%] h-[100%] lg:h-[500px] "
+            className="relative w-[100%] h-[100%] lg:h-[800px] "
           >
-            <div className="relative w-[100%] object-contain  ">
+            <div className="relative w-[100%] object-contain  h-full">
               <div>
                 <Image
                   source={Slide1}
                   alt=""
-                  styling="h-[500px] lg:h-[600px] w-[100%] object-cover "
+                  styling=" lg:h-[800px] h-[500px] w-[100%] object-cover "
                 />
               </div>
 
@@ -96,7 +96,7 @@ const Cover = () => {
                 <Image
                   source={Slide2}
                   alt=""
-                  styling="h-[500px] lg:h-[600px] w-[100%] object-cover "
+                  styling="h-[500px] lg:h-[800px] w-[100%] object-cover "
                 />
               </div>
 
@@ -127,7 +127,7 @@ const Cover = () => {
                 <Image
                   source={Slide3}
                   alt=""
-                  styling="h-[500px] lg:h-[600px] w-[100%] object-cover "
+                  styling="h-[500px] lg:h-[800px] w-[100%] object-cover "
                 />
               </div>
 
@@ -156,116 +156,209 @@ const Cover = () => {
           </Carousel>
         </div>
       )}
-      {["/le-centre"].includes(router.pathname) && (
+      {["/about"].includes(router.pathname) && (
         <div
           className=" overflow-hidden justify-center flex"
           style={{
-            backgroundImage: `url(${Slide1})`,
+            backgroundImage: `url(${CoverImg})`,
             backgroundSize: " cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             width: "100%",
           }}
         >
-          <div className="bg-black bg-opacity-30 w-full">
-            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-start">
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">About</div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/contact"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">Contact</div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/donate"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">Donate</div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/events"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">Events</div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/gallery"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">Gallery</div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/institutions"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
               <div className="text-5xl text-white font-bold pt-10">
-                le-centre
-              </div>
-              <div className="text-xl text-white font-bold py-2">
-                Lorem ipsum dolor sit amet, consectetur
+                Institutions
               </div>
             </div>
           </div>
         </div>
       )}
-      {["/faire-un-don"].includes(router.pathname) && (
+      {["/join-us"].includes(router.pathname) && (
         <div
           className=" overflow-hidden justify-center flex"
           style={{
-            backgroundImage: `url(${Slide2})`,
+            backgroundImage: `url(${CoverImg})`,
             backgroundSize: " cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             width: "100%",
           }}
         >
-          <div className="bg-black bg-opacity-30 w-full">
-            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-start">
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">Join Us</div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/online-application"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
               <div className="text-5xl text-white font-bold pt-10">
-                Faire un don
-              </div>
-              <div className="text-xl text-white font-bold py-2">
-                Lorem ipsum dolor sit amet, consectetur
+                Online Application
               </div>
             </div>
           </div>
         </div>
       )}
-      {["/nous-joindre"].includes(router.pathname) && (
+      {["/partners"].includes(router.pathname) && (
         <div
           className=" overflow-hidden justify-center flex"
           style={{
-            backgroundImage: `url(${Slide3})`,
+            backgroundImage: `url(${CoverImg})`,
             backgroundSize: " cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             width: "100%",
           }}
         >
-          <div className="bg-black bg-opacity-30 w-full">
-            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-start">
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
               <div className="text-5xl text-white font-bold pt-10">
-                nous-joindre
-              </div>
-              <div className="text-xl text-white font-bold py-2">
-                Lorem ipsum dolor sit amet, consectetur
+                Partners
               </div>
             </div>
           </div>
         </div>
       )}
-      {["/soutenir"].includes(router.pathname) && (
+      {["/resources"].includes(router.pathname) && (
         <div
           className=" overflow-hidden justify-center flex"
           style={{
-            backgroundImage: `url(${Slide1})`,
+            backgroundImage: `url(${CoverImg})`,
             backgroundSize: " cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             width: "100%",
           }}
         >
-          <div className="bg-black bg-opacity-30 w-full">
-            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-start">
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
               <div className="text-5xl text-white font-bold pt-10">
-                soutenir
-              </div>
-              <div className="text-xl text-white font-bold py-2">
-                Lorem ipsum dolor sit amet, consectetur
+                Resources
               </div>
             </div>
           </div>
         </div>
       )}
-      {["/activites"].includes(router.pathname) && (
+      {["/trustees"].includes(router.pathname) && (
         <div
           className=" overflow-hidden justify-center flex"
           style={{
-            backgroundImage: `url(${Slide2})`,
+            backgroundImage: `url(${CoverImg})`,
             backgroundSize: " cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             width: "100%",
           }}
         >
-          <div className="bg-black bg-opacity-30 w-full">
-            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-start">
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
               <div className="text-5xl text-white font-bold pt-10">
-                activites
-              </div>
-              <div className="text-xl text-white font-bold py-2">
-                Lorem ipsum dolor sit amet, consectetur
+                Trustees
               </div>
             </div>
           </div>

@@ -68,14 +68,7 @@ export default function Header() {
               Home
             </NavLink>
 
-            <NavLink
-              to="/activites"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[#007A33] text-xl font-bold  p-1 rounded-lg capitalize"
-                  : "text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize"
-              }
-            >
+            <div className="text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize">
               <DropdownMenu.Root
                 open={membersOpen}
                 onOpenChange={setMembersOpen}
@@ -98,36 +91,31 @@ export default function Header() {
                     key="1"
                     className="hover:bg-red-600 hover:text-white"
                   >
-                    <Link to="products-niveocare">Partners</Link>
+                    <Link to="partners">Partners</Link>
                   </DropdownMenu.Item>
                   <DropdownMenu.Item
                     key="2"
                     className="hover:bg-red-600 hover:text-white "
                   >
-                    <Link to="products-niveoschool">Institutions</Link>
+                    <Link to="institutions">Institutions</Link>
                   </DropdownMenu.Item>
                   <DropdownMenu.Item
                     key="3"
                     className="hover:bg-red-600 hover:text-white"
                   >
-                    <Link to="products-niveogym">Join Us</Link>
+                    <Link to="join-us">Join Us</Link>
                   </DropdownMenu.Item>
                   <DropdownMenu.Item
                     key="4"
                     className="hover:bg-red-600 hover:text-white"
                   >
-                    <Link to="products-niveoreg">Online Application</Link>
+                    <Link to="online-application">Online Application</Link>
                   </DropdownMenu.Item>
                 </DropdownMenu.Content>
               </DropdownMenu.Root>
-            </NavLink>
-            <NavLink
-              to="/activites"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[#007A33] text-xl font-bold  p-1 rounded-lg capitalize"
-                  : "text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize"
-              }
+            </div>
+           <div
+              className="text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize"
             >
               <DropdownMenu.Root open={mediaOpen} onOpenChange={setMediaOpen}>
                 <DropdownMenu.Trigger
@@ -148,26 +136,26 @@ export default function Header() {
                     key="1"
                     className="hover:bg-red-600 hover:text-white "
                   >
-                    <Link to="products-niveocare">Gallery</Link>
+                    <Link to="gallery">Gallery</Link>
                   </DropdownMenu.Item>
                   <DropdownMenu.Item
                     key="2"
                     className="hover:bg-red-600 hover:text-white"
                   >
-                    <Link to="products-niveoschool">Events</Link>
+                    <Link to="events">Events</Link>
                   </DropdownMenu.Item>
                   <DropdownMenu.Item
                     key="3"
                     className="hover:bg-red-600 hover:text-white"
                   >
-                    <Link to="products-niveogym">Resources</Link>
+                    <Link to="resources">Resources</Link>
                   </DropdownMenu.Item>
                 </DropdownMenu.Content>
               </DropdownMenu.Root>
-            </NavLink>
+            </div>
 
             <NavLink
-              to="/soutenir"
+              to="/about"
               className={({ isActive }) =>
                 isActive
                   ? "text-[#007A33] text-xl font-bold   p-1 rounded-lg capitalize"
@@ -178,7 +166,7 @@ export default function Header() {
             </NavLink>
 
             <NavLink
-              to="/nous-joindre"
+              to="/trustees"
               className={({ isActive }) =>
                 isActive
                   ? "text-[#007A33] text-xl font-bold   p-1 rounded-lg capitalize"
@@ -189,7 +177,7 @@ export default function Header() {
             </NavLink>
 
             <NavLink
-              to="/faire-un-don"
+              to="/contact"
               className={({ isActive }) =>
                 isActive
                   ? "text-[#007A33] text-xl font-bold  p-1 rounded-lg capitalize"
@@ -227,8 +215,7 @@ export default function Header() {
               </DropdownMenu.Item>
               <div className="border w-[100%] border-[#25554D]  opacity-80"></div>
               <DropdownMenu.Item className="hover:bg-red-600 ">
-                <Link
-                  to=""
+                <div
                   className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm"
                 >
                   <DropdownMenu.Root
@@ -243,7 +230,7 @@ export default function Header() {
                     <DropdownMenu.Content>
                       <DropdownMenu.Item key="1">
                         <Link
-                          to="products-niveocare"
+                          to="partners"
                           onClick={handleMouseLeaveMobileMembers}
                         >
                           Partners
@@ -251,7 +238,7 @@ export default function Header() {
                       </DropdownMenu.Item>
                       <DropdownMenu.Item key="2">
                         <Link
-                          to="products-niveoschool"
+                          to="institutions"
                           onClick={handleMouseLeaveMobileMembers}
                         >
                           Institutions
@@ -259,7 +246,7 @@ export default function Header() {
                       </DropdownMenu.Item>
                       <DropdownMenu.Item key="3">
                         <Link
-                          to="products-niveogym"
+                          to="join-us"
                           onClick={handleMouseLeaveMobileMembers}
                         >
                           Join Us
@@ -267,7 +254,7 @@ export default function Header() {
                       </DropdownMenu.Item>
                       <DropdownMenu.Item key="4">
                         <Link
-                          to="products-niveoreg"
+                          to="online-application"
                           onClick={handleMouseLeaveMobileMembers}
                         >
                           Online Application
@@ -275,7 +262,7 @@ export default function Header() {
                       </DropdownMenu.Item>
                     </DropdownMenu.Content>
                   </DropdownMenu.Root>
-                </Link>
+                </div>
               </DropdownMenu.Item>
               <div className="border w-[100%] border-[#25554D]  opacity-80"></div>
 
@@ -296,7 +283,7 @@ export default function Header() {
                     <DropdownMenu.Content>
                       <DropdownMenu.Item key="1">
                         <Link
-                          to="products-niveocare"
+                          to="gallery"
                           onClick={handleMouseLeaveMobileMedia}
                         >
                           Gallery
@@ -304,7 +291,7 @@ export default function Header() {
                       </DropdownMenu.Item>
                       <DropdownMenu.Item key="2">
                         <Link
-                          to="products-niveoschool"
+                          to="events"
                           onClick={handleMouseLeaveMobileMedia}
                         >
                           Events
@@ -312,7 +299,7 @@ export default function Header() {
                       </DropdownMenu.Item>
                       <DropdownMenu.Item key="3">
                         <Link
-                          to="products-niveogym"
+                          to="resources"
                           onClick={handleMouseLeaveMobileMedia}
                         >
                           Resources
@@ -326,7 +313,7 @@ export default function Header() {
               <div className="border w-[100%] border-[#25554D] opacity-100"></div>
               <DropdownMenu.Item>
                 <Link
-                  to="/nous-joindre"
+                  to="about"
                   className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm"
                 >
                   About
@@ -335,7 +322,7 @@ export default function Header() {
               <div className="border w-[100%] border-[#25554D] opacity-100"></div>
               <DropdownMenu.Item>
                 <Link
-                  to="/faire-un-don"
+                  to="trustees"
                   className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm"
                 >
                   Trustees
@@ -344,7 +331,7 @@ export default function Header() {
               <div className="border w-[100%] border-[#25554D] opacity-100"></div>
               <DropdownMenu.Item>
                 <Link
-                  to="/faire-un-don"
+                  to="contact"
                   className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm"
                 >
                   Contact
