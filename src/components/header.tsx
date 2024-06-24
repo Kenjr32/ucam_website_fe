@@ -114,9 +114,7 @@ export default function Header() {
                 </DropdownMenu.Content>
               </DropdownMenu.Root>
             </div>
-           <div
-              className="text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize"
-            >
+            <div className="text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize">
               <DropdownMenu.Root open={mediaOpen} onOpenChange={setMediaOpen}>
                 <DropdownMenu.Trigger
                   onClick={handleMouseEnterMedia}
@@ -191,7 +189,7 @@ export default function Header() {
           </menu>
         </div>
 
-        <div className="lg:hidden z-50 flex">
+        <div className="lg:hidden z-50 flex ">
           <DropdownMenu.Root>
             <DropdownMenu.Trigger className="focus:border-2 ">
               <button className="flex flex-col justify-between lg:hidden">
@@ -215,9 +213,7 @@ export default function Header() {
               </DropdownMenu.Item>
               <div className="border w-[100%] border-[#25554D]  opacity-80"></div>
               <DropdownMenu.Item className="hover:bg-red-600 ">
-                <div
-                  className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm"
-                >
+                <div className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm">
                   <DropdownMenu.Root
                     open={mobileMembersOpen}
                     onOpenChange={setMobileMembersOpen}
@@ -290,10 +286,7 @@ export default function Header() {
                         </Link>
                       </DropdownMenu.Item>
                       <DropdownMenu.Item key="2">
-                        <Link
-                          to="events"
-                          onClick={handleMouseLeaveMobileMedia}
-                        >
+                        <Link to="events" onClick={handleMouseLeaveMobileMedia}>
                           Events
                         </Link>
                       </DropdownMenu.Item>

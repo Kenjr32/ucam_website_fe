@@ -75,9 +75,9 @@ export default function Home() {
             </section>
           </div>
         </section>
-        <section className="w-full space-y-9 justify-center flex">
+        <section className="w-full space-y-9 justify-center flex ">
           <div className="max-w-7xl">
-            <Grid container spacing={2}>
+            <Grid container spacing={1}>
               <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
                 <ObjectiveCard
                   number="01"
@@ -85,42 +85,41 @@ export default function Home() {
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
-                {" "}
+              
                 <ObjectiveCard
                   number="02"
                   objective='"To contribute to Malawi’s higher education policy formulation and review"'
                 />
-              </Grid>{" "}
+              </Grid>
               <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
-                {" "}
                 <ObjectiveCard
                   number="03"
                   objective='"To promote and facilitate networking, collaboration and experience sharing in teaching, learning, research, community service/outreach and industry engagement"'
                 />
-              </Grid>{" "}
+              </Grid>
               <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
-                {" "}
+                
                 <ObjectiveCard
                   number="04"
                   objective='"To enhance leadership and institutional management capacity"'
                 />
-              </Grid>{" "}
+              </Grid>
               <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
-                {" "}
+              
                 <ObjectiveCard
                   number="05"
                   objective='"To facilitate effective dialogue among universities, colleges and other stakeholders on issues affecting higher education"'
                 />
-              </Grid>{" "}
+              </Grid>
               <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
                 {" "}
                 <ObjectiveCard
                   number="06"
                   objective='"To organize fora for the dissemination of research on key issues affecting higher education in Malawi"'
                 />
-              </Grid>{" "}
+              </Grid>
               <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
-                {" "}
+                
                 <ObjectiveCard
                   number="07"
                   objective='"To establish a Secretariat that is effective, efficient and sustainable for the pursuit of the Association’s goals"'
@@ -130,7 +129,7 @@ export default function Home() {
           </div>
         </section>
         <section className="w-full text-black py-20 bg-white ">
-          <div className="w-full max-w-7xl m-auto items-center flex justify-center">
+          <div className="w-full max-w-7xl px-1 items-center flex justify-center">
             <section className="space-y-5">
               <div className="text-3xl font-bold text-black text-center">
                 OUR PARTNERS
@@ -142,8 +141,8 @@ export default function Home() {
             </section>
           </div>
         </section>
-        <section className="w-full space-y-9 py-10 justify-center flex ">
-          <div className="max-w-7xl">
+        <section className="w-full space-y-9 py-10 justify-center flex bg-white">
+          <div className="max-w-7xl overflow-hidden">
             <PartnersCarousel />
           </div>
         </section>

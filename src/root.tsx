@@ -20,7 +20,7 @@ export default function Root() {
           backgroundPosition: "top, bottom",
         }}
       >
-        <div className="w-[100%] h-[100%] bg-white bg-opacity-100">
+        <div className="w-[100%] h-[100%]  bg-opacity-100">
           <Cover />
           <Outlet />
         </div>
