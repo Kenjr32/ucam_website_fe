@@ -68,24 +68,23 @@ export default function Header() {
               Home
             </NavLink>
 
-            <div className="text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize">
+            <div
+              onMouseEnter={handleMouseEnterMembers}
+              onMouseLeave={handleMouseLeaveMembers}
+              className="text-black text-xl hover:cursor-pointer hover:text-[#C8102E] font-bold p-1 capitalize"
+            >
               <DropdownMenu.Root
                 open={membersOpen}
                 onOpenChange={setMembersOpen}
               >
-                <DropdownMenu.Trigger
-                  onClick={handleMouseEnterMembers}
-                  onMouseEnter={handleMouseEnterMembers}
-                  onMouseLeave={handleMouseLeaveMembers}
-                >
+                <DropdownMenu.Trigger onClick={handleMouseEnterMembers}>
                   <p>
                     Members <KeyboardArrowDownRoundedIcon />
                   </p>
                 </DropdownMenu.Trigger>
                 <DropdownMenu.Content
-                  onMouseEnter={handleMouseEnterMembers}
                   onClick={handleMouseLeaveMembers}
-                  onMouseLeave={handleMouseLeaveMembers}
+                 
                 >
                   <DropdownMenu.Item
                     key="1"
@@ -114,21 +113,21 @@ export default function Header() {
                 </DropdownMenu.Content>
               </DropdownMenu.Root>
             </div>
-            <div className="text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize">
+            <div
+              onMouseEnter={handleMouseEnterMedia}
+              onMouseLeave={handleMouseLeaveMedia}
+              className="text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize"
+            >
               <DropdownMenu.Root open={mediaOpen} onOpenChange={setMediaOpen}>
-                <DropdownMenu.Trigger
-                  onClick={handleMouseEnterMedia}
-                  onMouseEnter={handleMouseEnterMedia}
-                  onMouseLeave={handleMouseLeaveMedia}
-                >
+                <DropdownMenu.Trigger onClick={handleMouseEnterMedia}>
                   <p>
                     Media <KeyboardArrowDownRoundedIcon />
                   </p>
                 </DropdownMenu.Trigger>
                 <DropdownMenu.Content
-                  onMouseEnter={handleMouseEnterMedia}
+              
                   onClick={handleMouseLeaveMedia}
-                  onMouseLeave={handleMouseLeaveMedia}
+                
                 >
                   <DropdownMenu.Item
                     key="1"
