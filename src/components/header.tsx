@@ -14,12 +14,9 @@ export default function Header() {
   const [membersOpen, setMembersOpen] = useState(false);
   const [mediaOpen, setMediaOpen] = useState(false);
   const [mobile, setMobile] = useState(false);
-  const [mobileMembersOpen, setMobileMembersOpen] = useState(false);
-  const [mobileMediaOpen, setMobileMediaOpen] = useState(false);
 
-  const handleMobileOpen = () => {
-    setMobile(true);
-  };
+
+
   const handleMobileClose = () => {
     setMobile(false);
   };
@@ -42,18 +39,6 @@ export default function Header() {
   //   setMobileMembersOpen(true);
   // };
 
-  const handleMouseLeaveMobileMembers = () => {
-    setMobileMembersOpen(false);
-    setMobile(false);
-  };
-  // const handleMouseEnterMobileMedia = () => {
-  //   setMobileMediaOpen(true);
-  // };
-
-  const handleMouseLeaveMobileMedia = () => {
-    setMobileMediaOpen(false);
-    setMobile(false);
-  };
 
   return (
     <header className="w-full bg-white bg-opacity-100 top-0 absolute z-10 ">
