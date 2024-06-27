@@ -1,21 +1,28 @@
 import { Link, NavLink } from "react-router-dom";
 
-import { DropdownMenu } from "@radix-ui/themes";
+
 import Logo from "../assets/images/logo/Logo UCAM1.png";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "../components/image/image";
 import { useState } from "react";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 export default function Header() {
   //const [lang, setLang] = useState("En");
 
   const [membersOpen, setMembersOpen] = useState(false);
   const [mediaOpen, setMediaOpen] = useState(false);
-
+  const [mobile, setMobile] = useState(false);
   const [mobileMembersOpen, setMobileMembersOpen] = useState(false);
   const [mobileMediaOpen, setMobileMediaOpen] = useState(false);
 
+  const handleMobileOpen = () => {
+    setMobile(true);
+  };
+  const handleMobileClose = () => {
+    setMobile(false);
+  };
   const handleMouseEnterMembers = () => {
     setMembersOpen(true);
   };
@@ -37,6 +44,7 @@ export default function Header() {
 
   const handleMouseLeaveMobileMembers = () => {
     setMobileMembersOpen(false);
+    setMobile(false);
   };
   // const handleMouseEnterMobileMedia = () => {
   //   setMobileMediaOpen(true);
@@ -44,6 +52,7 @@ export default function Header() {
 
   const handleMouseLeaveMobileMedia = () => {
     setMobileMediaOpen(false);
+    setMobile(false);
   };
 
   return (
@@ -82,10 +91,7 @@ export default function Header() {
                     Members <KeyboardArrowDownRoundedIcon />
                   </p>
                 </DropdownMenu.Trigger>
-                <DropdownMenu.Content
-                  onClick={handleMouseLeaveMembers}
-                 
-                >
+                <DropdownMenu.Content onClick={handleMouseLeaveMembers}>
                   <DropdownMenu.Item
                     key="1"
                     className="hover:bg-red-600 hover:text-white"
@@ -124,11 +130,7 @@ export default function Header() {
                     Media <KeyboardArrowDownRoundedIcon />
                   </p>
                 </DropdownMenu.Trigger>
-                <DropdownMenu.Content
-              
-                  onClick={handleMouseLeaveMedia}
-                
-                >
+                <DropdownMenu.Content onClick={handleMouseLeaveMedia}>
                   <DropdownMenu.Item
                     key="1"
                     className="hover:bg-red-600 hover:text-white "
@@ -150,7 +152,6 @@ export default function Header() {
                 </DropdownMenu.Content>
               </DropdownMenu.Root>
             </div>
-
             <NavLink
               to="/about"
               className={({ isActive }) =>
@@ -161,7 +162,6 @@ export default function Header() {
             >
               About
             </NavLink>
-
             <NavLink
               to="/trustees"
               className={({ isActive }) =>
@@ -172,7 +172,6 @@ export default function Header() {
             >
               Trustees
             </NavLink>
-
             <NavLink
               to="/contact"
               className={({ isActive }) =>
@@ -183,153 +182,177 @@ export default function Header() {
             >
               Contact
             </NavLink>
-
             <div></div>
           </menu>
         </div>
 
         <div className="lg:hidden z-50 flex ">
-          <DropdownMenu.Root>
-            <DropdownMenu.Trigger className="focus:border-2 ">
-              <button className="flex flex-col justify-between lg:hidden">
+          <DropdownMenu.Root open={mobile} onOpenChange={setMobile}>
+            <DropdownMenu.Trigger asChild>
+              <button className="IconButton" aria-label="Customise options">
                 <MenuIcon
                   className="text-[#25554D]"
                   style={{ fontSize: "40px" }}
                 />
               </button>
             </DropdownMenu.Trigger>
-            <DropdownMenu.Content
-              className="bg-white"
-              style={{ backgroundColor: "white" }}
-            >
-              <DropdownMenu.Item className=" ">
-                <Link
-                  to="/le-centre"
-                  className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm"
-                >
-                  Home
-                </Link>
-              </DropdownMenu.Item>
-              <div className="border w-[100%] border-[#25554D]  opacity-80"></div>
-              <DropdownMenu.Item className="hover:bg-red-600 ">
-                <div className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm">
-                  <DropdownMenu.Root
-                    open={mobileMembersOpen}
-                    onOpenChange={setMobileMembersOpen}
+
+            <DropdownMenu.Portal>
+              <DropdownMenu.Content
+                className="DropdownMenuContent bg-white  p-5 rounded-md"
+                sideOffset={5}
+              >
+                <DropdownMenu.Item className="DropdownMenuItem">
+                  <Link
+                    to="/"
+                    className="text-black hover:text-[#25554D] font-normal text-md"
+                    onClick={handleMobileClose}
                   >
-                    <DropdownMenu.Trigger>
-                      <p>
-                        Members <KeyboardArrowDownRoundedIcon />
-                      </p>
-                    </DropdownMenu.Trigger>
-                    <DropdownMenu.Content>
-                      <DropdownMenu.Item key="1">
+                    Home
+                  </Link>
+                </DropdownMenu.Item>
+                <div className="border w-[100%] border-red-800  opacity-80"></div>
+                <DropdownMenu.Sub>
+                  <DropdownMenu.SubTrigger className="DropdownMenuSubTrigger">
+                    <p className="text-black  hover:text-[#25554D] font-normal text-md">
+                      Members <KeyboardArrowDownRoundedIcon />
+                    </p>
+                  </DropdownMenu.SubTrigger>
+                  <DropdownMenu.Portal>
+                    <DropdownMenu.SubContent
+                      className="DropdownMenuSubContent bg-white p-5 rounded-md"
+                      sideOffset={2}
+                      alignOffset={-5}
+                    >
+                      <DropdownMenu.Item className="DropdownMenuItem">
                         <Link
                           to="partners"
-                          onClick={handleMouseLeaveMobileMembers}
+                          onClick={handleMobileClose}
+                          className="text-black  hover:text-[#25554D] font-normal text-md"
                         >
                           Partners
                         </Link>
                       </DropdownMenu.Item>
-                      <DropdownMenu.Item key="2">
+                      <div className="border w-[100%] border-red-800  opacity-80"></div>
+                      <DropdownMenu.Item className="DropdownMenuItem">
                         <Link
                           to="institutions"
-                          onClick={handleMouseLeaveMobileMembers}
+                          onClick={handleMobileClose}
+                          className="text-black  hover:text-[#25554D] font-normal text-md"
                         >
                           Institutions
                         </Link>
                       </DropdownMenu.Item>
-                      <DropdownMenu.Item key="3">
+                      <div className="border w-[100%] border-red-800  opacity-80"></div>
+                      <DropdownMenu.Item className="DropdownMenuItem">
                         <Link
                           to="join-us"
-                          onClick={handleMouseLeaveMobileMembers}
+                          onClick={handleMobileClose}
+                          className="text-black  hover:text-[#25554D] font-normal text-md"
                         >
                           Join Us
                         </Link>
                       </DropdownMenu.Item>
-                      <DropdownMenu.Item key="4">
+                      <div className="border w-[100%] border-red-800  opacity-80"></div>
+                      <DropdownMenu.Item className="DropdownMenuItem">
                         <Link
                           to="online-application"
-                          onClick={handleMouseLeaveMobileMembers}
+                          onClick={handleMobileClose}
+                          className="text-black  hover:text-[#25554D] font-normal text-md"
                         >
                           Online Application
                         </Link>
                       </DropdownMenu.Item>
-                    </DropdownMenu.Content>
-                  </DropdownMenu.Root>
-                </div>
-              </DropdownMenu.Item>
-              <div className="border w-[100%] border-[#25554D]  opacity-80"></div>
-
-              <DropdownMenu.Item className="hover:bg-red-600 ">
-                <Link
-                  to=""
-                  className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm"
-                >
-                  <DropdownMenu.Root
-                    open={mobileMediaOpen}
-                    onOpenChange={setMobileMediaOpen}
-                  >
-                    <DropdownMenu.Trigger>
-                      <p>
-                        Media <KeyboardArrowDownRoundedIcon />
-                      </p>
-                    </DropdownMenu.Trigger>
-                    <DropdownMenu.Content>
-                      <DropdownMenu.Item key="1">
+                    </DropdownMenu.SubContent>
+                  </DropdownMenu.Portal>
+                </DropdownMenu.Sub>
+                <div className="border w-[100%] border-red-800  opacity-80"></div>
+                <DropdownMenu.Sub>
+                  <DropdownMenu.SubTrigger className="DropdownMenuSubTrigger">
+                    <p className="text-black  hover:text-[#25554D] font-normal text-md">
+                      Media <KeyboardArrowDownRoundedIcon />
+                    </p>
+                  </DropdownMenu.SubTrigger>
+                  <DropdownMenu.Portal>
+                    <DropdownMenu.SubContent
+                      className="DropdownMenuSubContent  bg-white p-5 rounded-md"
+                      sideOffset={2}
+                      alignOffset={-5}
+                    >
+                      <DropdownMenu.Item className="DropdownMenuItem">
                         <Link
                           to="gallery"
-                          onClick={handleMouseLeaveMobileMedia}
+                          onClick={handleMobileClose}
+                          className="text-black  hover:text-[#25554D] font-normal text-md"
                         >
                           Gallery
                         </Link>
                       </DropdownMenu.Item>
-                      <DropdownMenu.Item key="2">
-                        <Link to="events" onClick={handleMouseLeaveMobileMedia}>
+                      <div className="border w-[100%] border-red-800  opacity-80"></div>
+                      <DropdownMenu.Item className="DropdownMenuItem">
+                        <Link
+                          to="events"
+                          onClick={handleMobileClose}
+                          className="text-black  hover:text-[#25554D] font-normal text-md"
+                        >
                           Events
                         </Link>
                       </DropdownMenu.Item>
-                      <DropdownMenu.Item key="3">
+                      <div className="border w-[100%] border-red-800  opacity-80"></div>
+                      <DropdownMenu.Item className="DropdownMenuItem">
                         <Link
                           to="resources"
-                          onClick={handleMouseLeaveMobileMedia}
+                          onClick={handleMobileClose}
+                          className="text-black  hover:text-[#25554D] font-normal text-md"
                         >
                           Resources
                         </Link>
                       </DropdownMenu.Item>
-                    </DropdownMenu.Content>
-                  </DropdownMenu.Root>
-                </Link>
-              </DropdownMenu.Item>
-
-              <div className="border w-[100%] border-[#25554D] opacity-100"></div>
-              <DropdownMenu.Item>
-                <Link
-                  to="about"
-                  className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm"
-                >
-                  About
-                </Link>
-              </DropdownMenu.Item>
-              <div className="border w-[100%] border-[#25554D] opacity-100"></div>
-              <DropdownMenu.Item>
-                <Link
-                  to="trustees"
-                  className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm"
-                >
-                  Trustees
-                </Link>
-              </DropdownMenu.Item>
-              <div className="border w-[100%] border-[#25554D] opacity-100"></div>
-              <DropdownMenu.Item>
-                <Link
-                  to="contact"
-                  className="text-[#C8102E] hover:text-[#25554D] font-bold text-sm"
-                >
-                  Contact
-                </Link>
-              </DropdownMenu.Item>
-            </DropdownMenu.Content>
+                      <div className="border w-[100%] border-red-800  opacity-80"></div>
+                      <DropdownMenu.Item className="DropdownMenuItem">
+                        <Link
+                          to="online-application"
+                          onClick={handleMobileClose}
+                          className="text-black  hover:text-[#25554D] font-normal text-md"
+                        >
+                          Online Application
+                        </Link>
+                      </DropdownMenu.Item>
+                    </DropdownMenu.SubContent>
+                  </DropdownMenu.Portal>
+                </DropdownMenu.Sub>
+                <div className="border w-[100%] border-red-800  opacity-80"></div>
+                <DropdownMenu.Item className="DropdownMenuItem">
+                  <Link
+                    to="about"
+                    onClick={handleMobileClose}
+                    className="text-black  hover:text-[#25554D] font-normal text-md"
+                  >
+                    About
+                  </Link>
+                </DropdownMenu.Item>
+                <div className="border w-[100%] border-red-800  opacity-80"></div>
+                <DropdownMenu.Item className="DropdownMenuItem" disabled>
+                  <Link
+                    to="trustees"
+                    onClick={handleMobileClose}
+                    className="text-black  hover:text-[#25554D] font-normal text-md"
+                  >
+                    Trustees
+                  </Link>
+                </DropdownMenu.Item>
+                <div className="border w-[100%] border-red-800  opacity-80"></div>
+                <DropdownMenu.Item className="DropdownMenuItem" disabled>
+                  <Link
+                    to="contact"
+                    onClick={handleMobileClose}
+                    className="text-black  hover:text-[#25554D] font-normal text-md"
+                  >
+                    Contact
+                  </Link>
+                </DropdownMenu.Item>
+              </DropdownMenu.Content>
+            </DropdownMenu.Portal>
           </DropdownMenu.Root>
         </div>
       </nav>

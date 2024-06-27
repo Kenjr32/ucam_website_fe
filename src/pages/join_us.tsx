@@ -4,7 +4,9 @@ export default function JoinUs() {
   return (
     <>
     <div>
-        Join Us
+       <section>
+        
+       </section>
     </div>
     
     </>
