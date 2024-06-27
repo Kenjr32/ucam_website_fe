@@ -15,8 +15,6 @@ export default function Home() {
   return (
     <>
       <div>
-  
-
         <section className="w-full text-black py-20 bg-white ">
           <div className="w-full max-w-7xl m-auto items-center flex justify-center">
             <section className="space-y-9">
@@ -24,6 +22,11 @@ export default function Home() {
                 WELCOME TO UC
                 <span className="text-[#BE0B32]">A</span>
                 <span className="text-[#1a7c22]">M</span>
+              </div>
+              <div className="flex justify-center">
+                <div className="border-2 border-gray-200 w-10"></div>
+                <div className="border-2 border-red-600 w-10"></div>
+                <div className="border-2 border-gray-200 w-10"></div>
               </div>
             </section>
           </div>
@@ -85,7 +88,6 @@ export default function Home() {
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
-              
                 <ObjectiveCard
                   number="02"
                   objective='"To contribute to Malawi’s higher education policy formulation and review"'
@@ -98,14 +100,12 @@ export default function Home() {
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
-                
                 <ObjectiveCard
                   number="04"
                   objective='"To enhance leadership and institutional management capacity"'
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
-              
                 <ObjectiveCard
                   number="05"
                   objective='"To facilitate effective dialogue among universities, colleges and other stakeholders on issues affecting higher education"'
@@ -119,7 +119,6 @@ export default function Home() {
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
-                
                 <ObjectiveCard
                   number="07"
                   objective='"To establish a Secretariat that is effective, efficient and sustainable for the pursuit of the Association’s goals"'
