@@ -62,79 +62,89 @@ export default function Header() {
               Home
             </NavLink>
 
-            <div
-              onMouseEnter={handleMouseEnterMembers}
-              onMouseLeave={handleMouseLeaveMembers}
-              className="text-black text-xl hover:cursor-pointer hover:text-[#C8102E] font-bold p-1 capitalize"
-            >
+            <div className="text-black text-xl hover:cursor-pointer hover:text-[#C8102E] font-bold p-1 capitalize">
               <DropdownMenu.Root
                 open={membersOpen}
                 onOpenChange={setMembersOpen}
               >
-                <DropdownMenu.Trigger onClick={handleMouseEnterMembers}>
+                <DropdownMenu.Trigger
+                  onMouseEnter={handleMouseEnterMembers}
+                  onClick={handleMouseEnterMembers}
+                >
                   <p>
                     Members <KeyboardArrowDownRoundedIcon />
                   </p>
                 </DropdownMenu.Trigger>
-                <DropdownMenu.Content onClick={handleMouseLeaveMembers}>
-                  <DropdownMenu.Item
-                    key="1"
-                    className="hover:bg-red-600 hover:text-white"
+                <DropdownMenu.Portal>
+                  <DropdownMenu.Content
+                    onClick={handleMouseLeaveMembers}
+                    onMouseLeave={handleMouseLeaveMembers}
+                    className="DropdownMenuContent bg-white border-0  p-5 rounded-md"
                   >
-                    <Link to="partners">Partners</Link>
-                  </DropdownMenu.Item>
-                  <DropdownMenu.Item
-                    key="2"
-                    className="hover:bg-red-600 hover:text-white "
-                  >
-                    <Link to="institutions">Institutions</Link>
-                  </DropdownMenu.Item>
-                  <DropdownMenu.Item
-                    key="3"
-                    className="hover:bg-red-600 hover:text-white"
-                  >
-                    <Link to="join-us">Join Us</Link>
-                  </DropdownMenu.Item>
-                  <DropdownMenu.Item
-                    key="4"
-                    className="hover:bg-red-600 hover:text-white"
-                  >
-                    <Link to="online-application">Online Application</Link>
-                  </DropdownMenu.Item>
-                </DropdownMenu.Content>
+                    <DropdownMenu.Item
+                      key="1"
+                      className="hover:text-red-600 font-semibold pt-2"
+                    >
+                      <Link to="partners">Partners</Link>
+                    </DropdownMenu.Item>
+                    <DropdownMenu.Item
+                      key="2"
+                      className=" hover:text-red-600 font-semibold pt-2 "
+                    >
+                      <Link to="institutions">Institutions</Link>
+                    </DropdownMenu.Item>
+                    <DropdownMenu.Item
+                      key="3"
+                      className="hover:text-red-600 font-semibold pt-2"
+                    >
+                      <Link to="join-us">Join Us</Link>
+                    </DropdownMenu.Item>
+                    <DropdownMenu.Item
+                      key="4"
+                      className="hover:text-red-600 font-semibold pt-2"
+                    >
+                      <Link to="online-application">Online Application</Link>
+                    </DropdownMenu.Item>
+                  </DropdownMenu.Content>
+                </DropdownMenu.Portal>
               </DropdownMenu.Root>
             </div>
-            <div
-              onMouseEnter={handleMouseEnterMedia}
-              onMouseLeave={handleMouseLeaveMedia}
-              className="text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize"
-            >
+            <div className="text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize">
               <DropdownMenu.Root open={mediaOpen} onOpenChange={setMediaOpen}>
-                <DropdownMenu.Trigger onClick={handleMouseEnterMedia}>
+                <DropdownMenu.Trigger
+                  onClick={handleMouseEnterMedia}
+                  onMouseEnter={handleMouseEnterMedia}
+                >
                   <p>
                     Media <KeyboardArrowDownRoundedIcon />
                   </p>
                 </DropdownMenu.Trigger>
-                <DropdownMenu.Content onClick={handleMouseLeaveMedia}>
-                  <DropdownMenu.Item
-                    key="1"
-                    className="hover:bg-red-600 hover:text-white "
+                <DropdownMenu.Portal>
+                  <DropdownMenu.Content
+                    onMouseLeave={handleMouseLeaveMedia}
+                    onClick={handleMouseLeaveMedia}
+                    className="DropdownMenuContent bg-white border-0  p-5 rounded-md"
                   >
-                    <Link to="gallery">Gallery</Link>
-                  </DropdownMenu.Item>
-                  <DropdownMenu.Item
-                    key="2"
-                    className="hover:bg-red-600 hover:text-white"
-                  >
-                    <Link to="events">Events</Link>
-                  </DropdownMenu.Item>
-                  <DropdownMenu.Item
-                    key="3"
-                    className="hover:bg-red-600 hover:text-white"
-                  >
-                    <Link to="resources">Resources</Link>
-                  </DropdownMenu.Item>
-                </DropdownMenu.Content>
+                    <DropdownMenu.Item
+                      key="1"
+                      className="hover:text-red-600 font-semibold pt-2"
+                    >
+                      <Link to="gallery">Gallery</Link>
+                    </DropdownMenu.Item>
+                    <DropdownMenu.Item
+                      key="2"
+                      className="hover:text-red-600 font-semibold pt-2"
+                    >
+                      <Link to="events">Events</Link>
+                    </DropdownMenu.Item>
+                    <DropdownMenu.Item
+                      key="3"
+                      className="hover:text-red-600 font-semibold pt-2"
+                    >
+                      <Link to="resources">Resources</Link>
+                    </DropdownMenu.Item>
+                  </DropdownMenu.Content>
+                </DropdownMenu.Portal>
               </DropdownMenu.Root>
             </div>
             <NavLink

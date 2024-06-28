@@ -13,7 +13,11 @@ import OnlineApplication from "./pages/online_application";
 import Partners from "./pages/partners";
 import Resources from "./pages/resources";
 import Trustees from "./pages/trustees";
-
+import Conference1 from "./pages/event/conference";
+import Conference3 from "./pages/event/conference3"
+import Scholars from "./pages/event/scholars";
+import Discussion from "./pages/event/discussion";
+import Discussion2 from "./pages/event/discussion2";
 const Router = createHashRouter([
   {
     path: "/",
@@ -69,6 +73,27 @@ const Router = createHashRouter([
         path: "trustees",
         element: <Trustees />,
       },
+      {
+        path: "conference",
+        element: <Conference1/>,
+      },
+      {
+        path: "3rd-conference",
+        element: <Conference3/>,
+      },
+      {
+        path: "scholars",
+        element: <Scholars/>,
+      },
+      {
+        path: "discussion",
+        element: <Discussion/>,
+      },
+      {
+        path: "2nd-discussion",
+        element: <Discussion2/>,
+      },
+
     ],
   },
 ]);

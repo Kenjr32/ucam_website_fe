@@ -364,6 +364,106 @@ const Cover = () => {
           </div>
         </div>
       )}
+      {["/conference"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">
+                1st Conference
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/scholars"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">
+                Scholars
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/3rd-conference"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">
+               3rd Conference
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/discussion"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">
+               1st Panel Discussion
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/2nd-discussion"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">
+               2nd Panel Discussion
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div></div>
     </div>
