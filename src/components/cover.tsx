@@ -187,7 +187,7 @@ const Cover = () => {
         >
           <div className="bg-black bg-opacity-0 w-full">
             <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
-              <div className="text-5xl text-white font-bold pt-10">Contact</div>
+              <div className="text-5xl text-white font-bold pt-10">Contact Us!</div>
             </div>
           </div>
         </div>
@@ -358,7 +358,27 @@ const Cover = () => {
           <div className="bg-black bg-opacity-0 w-full">
             <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
               <div className="text-5xl text-white font-bold pt-10">
-                Trustees
+                Meet Our Trustees
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/available-jobs"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">
+                Available Jobs
               </div>
             </div>
           </div>

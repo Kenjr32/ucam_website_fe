@@ -9,6 +9,7 @@ import Events from "./pages/events";
 import Gallery from "./pages/gallery";
 import Institutions from "./pages/institutions";
 import JoinUs from "./pages/join_us";
+import Jobs from "./pages/jobs";
 import OnlineApplication from "./pages/online_application";
 import Partners from "./pages/partners";
 import Resources from "./pages/resources";
@@ -18,6 +19,7 @@ import Conference3 from "./pages/event/conference3"
 import Scholars from "./pages/event/scholars";
 import Discussion from "./pages/event/discussion";
 import Discussion2 from "./pages/event/discussion2";
+
 const Router = createHashRouter([
   {
     path: "/",
@@ -72,6 +74,10 @@ const Router = createHashRouter([
       {
         path: "trustees",
         element: <Trustees />,
+      },
+      {
+        path: "available-jobs",
+        element: <Jobs />,
       },
       {
         path: "conference",

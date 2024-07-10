@@ -172,7 +172,7 @@ export default function Resources() {
                         </div>
                         <div className="w-full flex justify-center">
                           <a href={row.file} target="_blank">
-                            <div className="p-2 bg-red-700 rounded-lg text-white w-24">
+                            <div className="p-2 bg-red-700 rounded-lg text-white w-24 justify-center flex">
                               Download
                             </div>
                           </a>

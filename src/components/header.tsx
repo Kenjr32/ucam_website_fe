@@ -55,14 +55,14 @@ export default function Header() {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#007A33] text-xl font-bold  p-1 rounded-lg capitalize"
-                  : "text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize"
+                  ? "text-[#007A33] text-lg font-bold  p-1 rounded-lg capitalize"
+                  : "text-black text-lg hover:text-[#C8102E] font-bold p-1 capitalize"
               }
             >
               Home
             </NavLink>
 
-            <div className="text-black text-xl hover:cursor-pointer hover:text-[#C8102E] font-bold p-1 capitalize">
+            <div className="text-black text-lg hover:cursor-pointer hover:text-[#C8102E] font-bold p-1 capitalize">
               <DropdownMenu.Root
                 open={membersOpen}
                 onOpenChange={setMembersOpen}
@@ -109,7 +109,7 @@ export default function Header() {
                 </DropdownMenu.Portal>
               </DropdownMenu.Root>
             </div>
-            <div className="text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize">
+            <div className="text-black text-lg hover:text-[#C8102E] font-bold p-1 capitalize">
               <DropdownMenu.Root open={mediaOpen} onOpenChange={setMediaOpen}>
                 <DropdownMenu.Trigger
                   onClick={handleMouseEnterMedia}
@@ -151,8 +151,8 @@ export default function Header() {
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#007A33] text-xl font-bold   p-1 rounded-lg capitalize"
-                  : "text-black] text-xl hover:text-[#C8102E] font-bold p-1 capitalize"
+                  ? "text-[#007A33] text-lg font-bold   p-1 rounded-lg capitalize"
+                  : "text-black] text-lg hover:text-[#C8102E] font-bold p-1 capitalize"
               }
             >
               About
@@ -161,18 +161,28 @@ export default function Header() {
               to="/trustees"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#007A33] text-xl font-bold   p-1 rounded-lg capitalize"
-                  : "text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize"
+                  ? "text-[#007A33] text-lg font-bold   p-1 rounded-lg capitalize"
+                  : "text-black text-lg hover:text-[#C8102E] font-bold p-1 capitalize"
               }
             >
               Trustees
             </NavLink>
             <NavLink
+              to="/available-jobs"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#007A33] text-lg font-bold   p-1 rounded-lg capitalize"
+                  : "text-black text-lg hover:text-[#C8102E] font-bold p-1 capitalize"
+              }
+            >
+              Jobs
+            </NavLink>
+            <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#007A33] text-xl font-bold  p-1 rounded-lg capitalize"
-                  : "text-black text-xl hover:text-[#C8102E] font-bold p-1 capitalize"
+                  ? "text-[#007A33] text-lg font-bold  p-1 rounded-lg capitalize"
+                  : "text-black text-lg hover:text-[#C8102E] font-bold p-1 capitalize"
               }
             >
               Contact
@@ -334,6 +344,16 @@ export default function Header() {
                     className="text-black  hover:text-[#25554D] font-normal text-md"
                   >
                     Trustees
+                  </Link>
+                </DropdownMenu.Item>
+                <div className="border w-[100%] border-red-800  opacity-80"></div>
+                <DropdownMenu.Item className="DropdownMenuItem" disabled>
+                  <Link
+                    to="available-jobs"
+                    onClick={handleMobileClose}
+                    className="text-black  hover:text-[#25554D] font-normal text-md"
+                  >
+                    Jobs
                   </Link>
                 </DropdownMenu.Item>
                 <div className="border w-[100%] border-red-800  opacity-80"></div>
