@@ -19,7 +19,8 @@ import Conference3 from "./pages/event/conference3"
 import Scholars from "./pages/event/scholars";
 import Discussion from "./pages/event/discussion";
 import Discussion2 from "./pages/event/discussion2";
-
+import Fundraising from "./pages/event/fundraising";
+import Funding from "./pages/event/funding";
 const Router = createHashRouter([
   {
     path: "/",
@@ -81,25 +82,32 @@ const Router = createHashRouter([
       },
       {
         path: "conference",
-        element: <Conference1/>,
+        element: <Conference1 />,
       },
       {
         path: "3rd-conference",
-        element: <Conference3/>,
+        element: <Conference3 />,
       },
       {
         path: "scholars",
-        element: <Scholars/>,
+        element: <Scholars />,
       },
       {
         path: "discussion",
-        element: <Discussion/>,
+        element: <Discussion />,
       },
       {
         path: "2nd-discussion",
-        element: <Discussion2/>,
+        element: <Discussion2 />,
       },
-
+      {
+        path: "event-fundraising",
+        element: <Fundraising/>,
+      },
+      {
+        path: "event-maximizing-funding",
+        element: <Funding />,
+      },
     ],
   },
 ]);

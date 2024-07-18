@@ -123,7 +123,7 @@ export default function Header() {
                   <DropdownMenu.Content
                     onMouseLeave={handleMouseLeaveMedia}
                     onClick={handleMouseLeaveMedia}
-                    className="DropdownMenuContent bg-white border-0  p-5 rounded-md"
+                    className="DropdownMenuContent bg-white  p-5"
                   >
                     <DropdownMenu.Item
                       key="1"

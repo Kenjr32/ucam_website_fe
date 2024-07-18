@@ -35,12 +35,12 @@ export default function Contact() {
                       </Grid>
                       <Grid item xs={12}>
                         <div className="text-lg text-red-600">
-                          WhatsApp: +265(0) 88 182 3022
+                          WhatsApp: +265(0) 99 149 1522
                         </div>
                       </Grid>
                       <Grid item xs={12}>
                         <div className="text-lg text-red-600">
-                          Phone : +265 (0)88 182 3022
+                          Phone : +265 (0) 99 149 1522
                         </div>
                       </Grid>
                     </Grid>
@@ -83,7 +83,6 @@ export default function Contact() {
                       <Grid item xs={12}>
                         <div className="text-lg">Malawi</div>
                       </Grid>
-                     
                     </Grid>
                   </div>
                 </div>
