@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const list = [
   { id: 1, name: "Exploring fundraising fundamentals" },

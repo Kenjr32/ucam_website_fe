@@ -1,4 +1,4 @@
-import React from "react";
+
 import Chinyama from "../assets/images/team/chinyama.jpg";
 import Madimbo from "../assets/images/team/Maggie.jpg";
 import Ngwira from "../assets/images/team/yolamu.jpg";

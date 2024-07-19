@@ -1,4 +1,4 @@
-import React from 'react';
+
 import UNIMA from "../assets/images/Logos/UnimaLogo.png";
 import MUBAS from "../assets/images/Logos/MUBAS lg.jpg";
 import KUHES from "../assets/images/Logos/KuHES.jpg";

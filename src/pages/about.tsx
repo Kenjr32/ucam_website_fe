@@ -1,4 +1,4 @@
-import React from "react";
+
 import Service1 from "../assets/images/services/team_01.jpg";
 import Service2 from "../assets/images/services/team_02.jpg";
 import Service3 from "../assets/images/services/team_03.jpg";

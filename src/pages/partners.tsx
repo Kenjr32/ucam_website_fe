@@ -1,5 +1,4 @@
 import { Grid } from "@mui/material";
-import React from "react";
 import NCST from "../assets/images/clients/client-en.png";
 import NCHE from "../assets/images/clients/nche.png";
 import USAID from "../assets/images/clients/usaid.png";

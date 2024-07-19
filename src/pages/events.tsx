@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 
 const Events = [
@@ -10,7 +10,7 @@ const Events = [
       "Universities and Colleges Association of Malawi(UCAM), in conjuction with the Ministry of Education(MoE), National Council for Higher ",
     location: "Sunbird Nkopola Lodge",
     time: "7:00 - 17:00",
-    link: "/conference",
+    // link: "/conference",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const Events = [
       "Scholars in Dialog, Three Guest Speakers from AAC&U will be presenting",
     location: "UNICAF Univeristy Boardroom",
     time: "09:00 - 12:00",
-    link: "/scholars",
+    // link: "/scholars",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const Events = [
       "Universities and Colleges as Drivers of Knowledge-Based Economy in Implementing Malawi 2063 Vision",
     location: "MIM Campus",
     time: "Two Day Event Ending in the Evenings",
-    link: "/3rd-conference",
+    // link: "/3rd-conference",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const Events = [
       "Continuation of the debate on Universities & Colleges being drivers of a Knowledge-Based Economy towards MW2063",
     location: "ZOOM Virtual Event",
     time: "18:30 - 20:30",
-    link: "/discussion",
+    // link: "/discussion",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const Events = [
       "“Forging A Better Partnership Between Industry and Higher Education Institutions for A Knowledge-Based Economy Towards Mw2063”",
     location: "ZOOM Virtual Event",
     time: "18:30 - 20:30",
-    link: "/2nd-discussion",
+    // link: "/2nd-discussion",
   },
   {
     id: 6,
