@@ -127,7 +127,7 @@ export default function Home() {
             </Grid>
           </div>
         </section>
-        <section className="w-full text-black py-20 bg-white ">
+        <section className="w-full text-black py-20 bg-white justify-center flex">
           <div className="w-full max-w-7xl px-1 items-center flex justify-center">
             <section className="space-y-5">
               <div className="text-3xl font-bold text-black text-center">
