@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 
-
 import Logo from "../assets/images/logo/Logo UCAM1.png";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -14,8 +13,6 @@ export default function Header() {
   const [membersOpen, setMembersOpen] = useState(false);
   const [mediaOpen, setMediaOpen] = useState(false);
   const [mobile, setMobile] = useState(false);
-
-
 
   const handleMobileClose = () => {
     setMobile(false);
@@ -38,7 +35,6 @@ export default function Header() {
   // const handleMouseEnterMobileMembers = () => {
   //   setMobileMembersOpen(true);
   // };
-
 
   return (
     <header className="w-full bg-white bg-opacity-100 top-0 absolute z-10 ">
@@ -132,12 +128,6 @@ export default function Header() {
                       <Link to="gallery">Gallery</Link>
                     </DropdownMenu.Item>
                     <DropdownMenu.Item
-                      key="2"
-                      className="hover:text-red-600 font-semibold pt-2"
-                    >
-                      <Link to="events">Events</Link>
-                    </DropdownMenu.Item>
-                    <DropdownMenu.Item
                       key="3"
                       className="hover:text-red-600 font-semibold pt-2"
                     >
@@ -157,6 +147,7 @@ export default function Header() {
             >
               About
             </NavLink>
+
             <NavLink
               to="/trustees"
               className={({ isActive }) =>
@@ -166,6 +157,16 @@ export default function Header() {
               }
             >
               Trustees
+            </NavLink>
+            <NavLink
+              to="/events"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#007A33] text-lg font-bold   p-1 rounded-lg capitalize"
+                  : "text-black] text-lg hover:text-[#C8102E] font-bold p-1 capitalize"
+              }
+            >
+              Events
             </NavLink>
             <NavLink
               to="/available-jobs"
@@ -293,16 +294,8 @@ export default function Header() {
                           Gallery
                         </Link>
                       </DropdownMenu.Item>
-                      <div className="border w-[100%] border-red-800  opacity-80"></div>
-                      <DropdownMenu.Item className="DropdownMenuItem">
-                        <Link
-                          to="events"
-                          onClick={handleMobileClose}
-                          className="text-black  hover:text-[#25554D] font-normal text-md"
-                        >
-                          Events
-                        </Link>
-                      </DropdownMenu.Item>
+                     
+                     
                       <div className="border w-[100%] border-red-800  opacity-80"></div>
                       <DropdownMenu.Item className="DropdownMenuItem">
                         <Link
@@ -344,6 +337,16 @@ export default function Header() {
                     className="text-black  hover:text-[#25554D] font-normal text-md"
                   >
                     Trustees
+                  </Link>
+                </DropdownMenu.Item>
+                <div className="border w-[100%] border-red-800  opacity-80"></div>
+                <DropdownMenu.Item className="DropdownMenuItem" disabled>
+                  <Link
+                    to="events"
+                    onClick={handleMobileClose}
+                    className="text-black  hover:text-[#25554D] font-normal text-md"
+                  >
+                    Events
                   </Link>
                 </DropdownMenu.Item>
                 <div className="border w-[100%] border-red-800  opacity-80"></div>

@@ -1,5 +1,3 @@
-
-
 const list = [
   { id: 1, name: "Identifying grant writing basics" },
   { id: 2, name: "Finding the right donor niche" },
@@ -74,14 +72,15 @@ export default function Funding() {
                   <strong>Fee: </strong>150,000 MWK for Non-members
                 </div>
                 <div>
-                  <span className="font-bold text-lg">Trainer:</span> Prof Pittman, PhD Executive Director,
-                  UCAM Prof. has taught fundraising, grant writing, and donor
-                  management for over 30 years. More importantly, she has been
-                  fundraising as an academic administrator with a solid track
-                  record in setting up fundraising programs for higher
-                  education. In this training, she will share tips and funding
-                  strategies to move higher education in Malawi beyond fee-only
-                  to exploring new resource-generation funding opportunities.
+                  <span className="font-bold text-lg">Trainer:</span> Prof
+                  Pittman, PhD Executive Director, UCAM Prof. has taught
+                  fundraising, grant writing, and donor management for over 30
+                  years. More importantly, she has been fundraising as an
+                  academic administrator with a solid track record in setting up
+                  fundraising programs for higher education. In this training,
+                  she will share tips and funding strategies to move higher
+                  education in Malawi beyond fee-only to exploring new
+                  resource-generation funding opportunities.
                 </div>
                 <div className="text-2xl pt-2">
                   Training is limited to 30 attendees
@@ -93,6 +92,16 @@ export default function Funding() {
                     universitiesmalawi@gmail.com
                   </span>{" "}
                 </div>
+              </div>
+              <div className="w-full flex justify-start mx-1">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScjLMpnvQ34t6DMWWZmQppV2V32kJogG5bvvu4Mod6sm9IGhQ/viewform?usp=sf_link"
+                  target="_blank"
+                >
+                  <div className="p-2 bg-red-700 rounded-lg text-white w-24 justify-center flex">
+                    Apply
+                  </div>
+                </a>
               </div>
 
               <div className="py-3 text-lg font-bold">

@@ -85,6 +85,16 @@ export default function Fundraising() {
                   </span>{" "}
                 </div>
               </div>
+              <div className="w-full flex justify-start mx-1">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfYPoCSaIr5iTY3le8cFvVq82P4SBLizHkcnJi9WfJnxQWHeg/viewform?usp=sf_link"
+                  target="_blank"
+                >
+                  <div className="p-2 bg-red-700 rounded-lg text-white w-24 justify-center flex">
+                    Apply
+                  </div>
+                </a>
+              </div>
 
               <div className="py-3 text-lg font-bold">
                 Payment for UCAM Bank Acct. No.: 1007214916, National Bank of
