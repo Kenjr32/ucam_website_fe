@@ -1,4 +1,3 @@
-
 import UNIMA from "../assets/images/Logos/UnimaLogo.png";
 import MUBAS from "../assets/images/Logos/MUBAS lg.jpg";
 import KUHES from "../assets/images/Logos/KuHES.jpg";
@@ -10,7 +9,7 @@ import CU from "../assets/images/Logos/CU-Logo-official.png";
 import ABC from "../assets/images/Logos/ABC.png";
 import MAGU from "../assets/images/Logos/Magu.png";
 import MAU from "../assets/images/Logos/MAU-LOGO.png";
-import MARBLE from "../assets/images/Logos/MHU.png";
+// import MARBLE from "../assets/images/Logos/MHU.png";
 import EXPLOITS from "../assets/images/Logos/Exploits.png";
 import PLU from "../assets/images/Logos/plu.png";
 import UNILIA from "../assets/images/Logos/unilia.jpg";
@@ -19,17 +18,17 @@ import NKHUNI from "../assets/images/Logos/nkoma.jpg";
 import UNICAF from "../assets/images/Logos/UNICAF.png";
 import HEBRON from "../assets/images/Logos/heb.jpg";
 import DYUNI from "../assets/images/Logos/DYU.png";
-import SKYWAY from "../assets/images/Logos/SU.jpg";
+// import SKYWAY from "../assets/images/Logos/SU.jpg";
 import SOUMA from "../assets/images/Logos/Souma.png";
 import UNILIL from "../assets/images/Logos/unilil_logo_circle.png";
 import DMI from "../assets/images/Logos/DMI.jpg";
 import EU from "../assets/images/Logos/Emmu.jpg";
 import BIU from "../assets/images/Logos/BIU.jpg";
 import MU from "../assets/images/Logos/Milli.png";
-import UBS from "../assets/images/Logos/UBS.png"
-import { Grid } from '@mui/material';
+import UBS from "../assets/images/Logos/UBS.png";
+import { Grid } from "@mui/material";
 import Image from "../components/image/image";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 const PublicUni = [
   {
     id: 1,
@@ -37,6 +36,7 @@ const PublicUni = [
     desc: "Accredited",
     image: UNIMA,
     website: "https://www.unima.ac.mw/",
+    paid: true,
   },
   {
     id: 2,
@@ -89,6 +89,7 @@ const PrivateUni = [
     desc: "Accredited",
     image: UNICAF,
     website: "https://unicafuniversity.ac.mw/",
+    paid: true,
   },
 
   {
@@ -119,13 +120,13 @@ const PrivateUni = [
     image: CU,
     website: "https://www.cunima1.online/",
   },
-  {
-    id: 6,
-    name: "Marble Hill University",
-    desc: "Accredited",
-    image: MARBLE,
-    website: "http://www.marblehilluniversity.ac.mw/",
-  },
+  // {
+  //   id: 6,
+  //   name: "Marble Hill University",
+  //   desc: "Accredited",
+  //   image: MARBLE,
+  //   website: "http://www.marblehilluniversity.ac.mw/",
+  // },
 
   {
     id: 7,
@@ -177,13 +178,13 @@ const PrivateUni = [
     image: DYUNI,
     website: "https://www.dyuni.ac.mw/",
   },
-  {
-    id: 14,
-    name: "Skyway University",
-    desc: "Accredited",
-    image: SKYWAY,
-    website: "https://www.skywayuniversity.com/",
-  },
+  // {
+  //   id: 14,
+  //   name: "Skyway University",
+  //   desc: "Accredited",
+  //   image: SKYWAY,
+  //   website: "https://www.skywayuniversity.com/",
+  // },
   {
     id: 15,
     name: "ShareWORLD Open University",
@@ -235,7 +236,6 @@ const PrivateUni = [
   },
 ];
 
-
 export default function Institutions() {
   return (
     <>
@@ -262,20 +262,19 @@ export default function Institutions() {
           <div className="w-full max-w-7xl m-auto items-center flex justify-center">
             <section className="space-y-2">
               <div className="text-xl font-bold text-black text-center">
-               PUBLIC UNIVERSITIES AND COLLEGES
+                PUBLIC UNIVERSITIES AND COLLEGES
               </div>
               <div className="flex justify-center">
                 <div className="border-2 border-gray-200 w-10"></div>
                 <div className="border-2 border-red-600 w-10"></div>
                 <div className="border-2 border-gray-200 w-10"></div>
               </div>
-             
             </section>
           </div>
         </section>
         <section className="w-full space-y-9 justify-center flex my-20 ">
           <div className="max-w-7xl  ">
-            <Grid container spacing={5} >
+            <Grid container spacing={5}>
               {PublicUni.map((item) => {
                 return (
                   <Grid
@@ -298,15 +297,28 @@ export default function Institutions() {
                           />
                         </div>
                       </div>
-                      <div className="py-5 px-2 justify-center flex w-full h-36 bg-white">
+                      <div className=" px-2 justify-center flex w-full h-46 bg-white">
                         <div>
-                          <div className="h-[70%]  text-lg font-semibold flex justify-center text-center">
+                          <div className="mb-8 h-8 text-lg font-semibold flex justify-center text-center">
                             {item.name}
                           </div>
                           {/* <div className="h-[20%]  text-md font-normal flex justify-center text-center">
                             {item.desc}
                           </div> */}
-                          <div className="h-[30%] items-center flex justify-center   text-white ">
+                          {item.paid ? (
+                            <div className=" items-center flex justify-center mb-2 text-white ">
+                              <Link
+                                className="w-36 hover:cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-500 bg-green-500 text-center rounded-md p-2"
+                                to={item.website}
+                                target="_blank"
+                              >
+                                Paid Member
+                              </Link>
+                            </div>
+                          ) : (
+                            <></>
+                          )}
+                          <div className=" items-center flex justify-center   text-white ">
                             <Link
                               className="w-36 hover:cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-500 bg-blue-500 text-center rounded-md p-2"
                               to={item.website}
@@ -328,20 +340,19 @@ export default function Institutions() {
           <div className="w-full max-w-7xl m-auto items-center flex justify-center">
             <section className="space-y-2">
               <div className="text-xl font-bold text-black text-center">
-               PRIVATE UNIVERSITIES AND COLLEGES
+                PRIVATE UNIVERSITIES AND COLLEGES
               </div>
               <div className="flex justify-center">
                 <div className="border-2 border-gray-200 w-10"></div>
                 <div className="border-2 border-red-600 w-10"></div>
                 <div className="border-2 border-gray-200 w-10"></div>
               </div>
-             
             </section>
           </div>
         </section>
         <section className="w-full space-y-9 justify-center flex my-20 ">
           <div className="max-w-7xl  ">
-            <Grid container spacing={5} >
+            <Grid container spacing={5}>
               {PrivateUni.map((item) => {
                 return (
                   <Grid
@@ -364,15 +375,28 @@ export default function Institutions() {
                           />
                         </div>
                       </div>
-                      <div className="py-5 px-2 justify-center flex w-full h-36 bg-white">
+                      <div className=" px-2 justify-center flex w-full h-46 bg-white">
                         <div>
-                          <div className="h-[70%]  text-lg font-semibold flex justify-center text-center">
+                          <div className="mb-8 h-8   text-lg font-semibold flex justify-center text-center">
                             {item.name}
                           </div>
                           {/* <div className="h-[20%]  text-md font-normal flex justify-center text-center">
                             {item.desc}
                           </div> */}
-                          <div className="h-[30%] items-center flex justify-center   text-white ">
+                          {item.paid ? (
+                            <div className=" items-center flex justify-center mb-2 text-white ">
+                              <Link
+                                className="w-36 hover:cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-500 bg-green-500 text-center rounded-md p-2"
+                                to={item.website}
+                                target="_blank"
+                              >
+                                Paid Member
+                              </Link>
+                            </div>
+                          ) : (
+                            <></>
+                          )}
+                          <div className=" items-center flex justify-center   text-white ">
                             <Link
                               className="w-36 hover:cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-500 bg-blue-500 text-center rounded-md p-2"
                               to={item.website}
