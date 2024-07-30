@@ -307,13 +307,12 @@ export default function Institutions() {
                           </div> */}
                           {item.paid ? (
                             <div className=" items-center flex justify-center mb-2 text-white ">
-                              <Link
-                                className="w-36 hover:cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-500 bg-green-500 text-center rounded-md p-2"
-                                to={item.website}
-                                target="_blank"
+                              <div
+                                className="w-36  bg-green-500 text-center rounded-md p-2"
+                              
                               >
                                 Paid Member
-                              </Link>
+                              </div>
                             </div>
                           ) : (
                             <></>
@@ -385,13 +384,12 @@ export default function Institutions() {
                           </div> */}
                           {item.paid ? (
                             <div className=" items-center flex justify-center mb-2 text-white ">
-                              <Link
-                                className="w-36 hover:cursor-pointer  hover:-translate-y-1 hover:scale-110 duration-500 bg-green-500 text-center rounded-md p-2"
-                                to={item.website}
-                                target="_blank"
+                              <div
+                                className="w-36  bg-green-500 text-center rounded-md p-2"
+                              
                               >
                                 Paid Member
-                              </Link>
+                              </div>
                             </div>
                           ) : (
                             <></>
