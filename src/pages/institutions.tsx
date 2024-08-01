@@ -9,23 +9,27 @@ import CU from "../assets/images/Logos/CU-Logo-official.png";
 import ABC from "../assets/images/Logos/ABC.png";
 import MAGU from "../assets/images/Logos/Magu.png";
 import MAU from "../assets/images/Logos/MAU-LOGO.png";
-// import MARBLE from "../assets/images/Logos/MHU.png";
+import MCA from "../assets/images/Logos/mca.png";
+import ESAMI from "../assets/images/Logos/esami.png";
+import MARBLE from "../assets/images/Logos/MHU.png";
 import EXPLOITS from "../assets/images/Logos/Exploits.png";
 import PLU from "../assets/images/Logos/plu.png";
 import UNILIA from "../assets/images/Logos/unilia.jpg";
 import JU from "../assets/images/Logos/JU.jpg";
 import NKHUNI from "../assets/images/Logos/nkoma.jpg";
 import UNICAF from "../assets/images/Logos/UNICAF.png";
-import HEBRON from "../assets/images/Logos/heb.jpg";
+// import HEBRON from "../assets/images/Logos/heb.jpg";
 import DYUNI from "../assets/images/Logos/DYU.png";
-// import SKYWAY from "../assets/images/Logos/SU.jpg";
+import SKYWAY from "../assets/images/Logos/SU.jpg";
 import SOUMA from "../assets/images/Logos/Souma.png";
-import UNILIL from "../assets/images/Logos/unilil_logo_circle.png";
+// import UNILIL from "../assets/images/Logos/unilil_logo_circle.png";
 import DMI from "../assets/images/Logos/DMI.jpg";
 import EU from "../assets/images/Logos/Emmu.jpg";
 import BIU from "../assets/images/Logos/BIU.jpg";
 import MU from "../assets/images/Logos/Milli.png";
 import UBS from "../assets/images/Logos/UBS.png";
+import LAMAU from "../assets/images/Logos/lamau.png";
+import ZTU from "../assets/images/Logos/ztu.png";
 import { Grid } from "@mui/material";
 import Image from "../components/image/image";
 import { Link } from "react-router-dom";
@@ -81,6 +85,20 @@ const PublicUni = [
     website:
       "https://www.nccedu.com/study-centres/malawi-institute-of-management-mim/",
   },
+  {
+    id: 8,
+    name: "Malawi College of Accountancy",
+    desc: "Accredited",
+    image: MCA,
+    website: "https://www.mca.ac.mw/",
+  },
+  {
+    id: 9,
+    name: "Eastern and Southern Africa Management Institute",
+    desc: "Accredited",
+    image: ESAMI,
+    website: "https://esami-africa.org/",
+  },
 ];
 const PrivateUni = [
   {
@@ -120,13 +138,13 @@ const PrivateUni = [
     image: CU,
     website: "https://www.cunima1.online/",
   },
-  // {
-  //   id: 6,
-  //   name: "Marble Hill University",
-  //   desc: "Accredited",
-  //   image: MARBLE,
-  //   website: "http://www.marblehilluniversity.ac.mw/",
-  // },
+  {
+    id: 6,
+    name: "Marble Hill University",
+    desc: "Accredited",
+    image: MARBLE,
+    website: "http://www.marblehilluniversity.ac.mw/",
+  },
 
   {
     id: 7,
@@ -164,13 +182,13 @@ const PrivateUni = [
     image: NKHUNI,
     website: "https://www.nkhoma.ac.mw/",
   },
-  {
-    id: 12,
-    name: "University of Hebron ",
-    desc: "Accredited",
-    image: HEBRON,
-    website: "https://uhb.ac.mw/",
-  },
+  // {
+  //   id: 12,
+  //   name: "University of Hebron ",
+  //   desc: "Accredited",
+  //   image: HEBRON,
+  //   website: "https://uhb.ac.mw/",
+  // },
   {
     id: 13,
     name: "Deayang University",
@@ -178,13 +196,13 @@ const PrivateUni = [
     image: DYUNI,
     website: "https://www.dyuni.ac.mw/",
   },
-  // {
-  //   id: 14,
-  //   name: "Skyway University",
-  //   desc: "Accredited",
-  //   image: SKYWAY,
-  //   website: "https://www.skywayuniversity.com/",
-  // },
+  {
+    id: 14,
+    name: "Skyway University",
+    desc: "Accredited",
+    image: SKYWAY,
+    website: "https://www.skywayuniversity.com/",
+  },
   {
     id: 15,
     name: "ShareWORLD Open University",
@@ -192,13 +210,13 @@ const PrivateUni = [
     image: SOUMA,
     website: "https://souma.ac.mw/",
   },
-  {
-    id: 16,
-    name: " University of Lilongwe",
-    desc: "Accredited",
-    image: UNILIL,
-    website: "https://unilil.ac.mw/",
-  },
+  // {
+  //   id: 16,
+  //   name: " University of Lilongwe",
+  //   desc: "Accredited",
+  //   image: UNILIL,
+  //   website: "https://unilil.ac.mw/",
+  // },
   {
     id: 17,
     name: "Jubilee University",
@@ -233,6 +251,20 @@ const PrivateUni = [
     desc: "Accredited",
     image: UBS,
     website: "http://ubsmw.com/",
+  },
+  {
+    id: 23,
+    name: "Lake Malawi Anglican University",
+    desc: "Accredited",
+    image: LAMAU,
+    website: "https://lamau.edu.mw/",
+  },
+  {
+    id: 24,
+    name: "Zomba Theological University",
+    desc: "Accredited",
+    image: ZTU,
+    website: "http://www.zombatheological.org/",
   },
 ];
 
