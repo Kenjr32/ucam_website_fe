@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function Component() {
   return (
     <Banner>
-      <div className="flex w-full justify-between border-b border-gray-200 bg-green-600 p-4 h-24 ">
+      <div className="flex w-full justify-between border-b border-gray-200 bg-green-500 p-4 h-24 ">
         <div className="mx-auto flex items-center">
           <p className="flex items-center text-sm font-normal text-white dark:text-white">
             <MdAnnouncement className="mr-4 h-4 w-4" />
@@ -25,8 +25,8 @@ export default function Component() {
           </p>
         </div>
         <Banner.CollapseButton
-          color="gray"
-          className="border-0 bg-transparent text-gray-500 dark:text-gray-400"
+          color="white"
+          className="border-0 bg-transparent text-white"
         >
           <HiX className="h-8 w-8" />
         </Banner.CollapseButton>

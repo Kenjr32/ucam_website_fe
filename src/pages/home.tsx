@@ -7,7 +7,7 @@ import Image from "../components/image/image";
 import ObjectiveCard from "../components/ObjectiveCard";
 import PartnersCarousel from "../components/PartnersCarousel";
 import Homepage from "../assets/images/homepage/Malawi graduation ceremony.jpg";
-import Banner from "../components/banner";
+
 export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-    <Banner/>
+    
       <div>
         <section className="w-full text-black py-20 bg-white ">
           <div className="w-full max-w-7xl m-auto items-center flex justify-center">
