@@ -72,7 +72,7 @@ export default function Fundraising() {
                   institutions
                 </div>
                 <div>
-                  <strong>Fee: </strong>150,000 MWK for Non-members
+                  <strong>Fee: </strong>180,000 MWK for Non-members
                 </div>
                 <div className="text-2xl pt-2">
                   Training is limited to 30 attendees

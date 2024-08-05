@@ -69,7 +69,7 @@ export default function Funding() {
                   institutions
                 </div>
                 <div>
-                  <strong>Fee: </strong>150,000 MWK for Non-members
+                  <strong>Fee: </strong>180,000 MWK for Non-members
                 </div>
                 <div>
                   <span className="font-bold text-lg">Trainer:</span> Prof
