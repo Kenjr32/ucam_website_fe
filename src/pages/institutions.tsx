@@ -137,6 +137,7 @@ const PrivateUni = [
     desc: "Accredited",
     image: CU,
     website: "https://www.cunima1.online/",
+    paid: true,
   },
   {
     id: 6,

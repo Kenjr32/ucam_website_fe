@@ -1,7 +1,7 @@
 import Header from "./header";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Image from "./image/image";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
 import { Carousel } from "react-responsive-carousel";
@@ -12,9 +12,9 @@ import Slide3 from "../assets/images/slides/slide_03.jpg";
 import CoverImg from "../assets/images/cover/darken_cap.jpeg";
 import Styles from "./LandingCarousel.module.css";
 
-
 const Cover = () => {
   const router = useLocation();
+  const navigate = useNavigate();
   return (
     <div className="">
       <Header />
@@ -83,7 +83,10 @@ const Cover = () => {
                     </div>
 
                     <div className={Styles.ButtonContainer}>
-                      <button className="bg-transparent  hover:bg-red-600 py-2 px-2 my-1 text-white flex justify-center rounded-md text-xl md:text-lg">
+                      <button
+                        onClick={() => navigate("/contact")}
+                        className="bg-transparent  hover:bg-red-600 py-2 px-2 my-1 text-white flex justify-center rounded-md text-xl md:text-lg"
+                      >
                         Contact Us
                       </button>
                     </div>
@@ -114,7 +117,10 @@ const Cover = () => {
                     </div>
 
                     <div className={Styles.ButtonContainer}>
-                      <button className="bg-transparent  hover:bg-red-600 py-2 px-2 my-1 text-white flex justify-center rounded-md text-xl md:text-lg">
+                      <button
+                        onClick={() => navigate("/contact")}
+                        className="bg-transparent  hover:bg-red-600 py-2 px-2 my-1 text-white flex justify-center rounded-md text-xl md:text-lg"
+                      >
                         Contact Us
                       </button>
                     </div>
@@ -187,7 +193,9 @@ const Cover = () => {
         >
           <div className="bg-black bg-opacity-0 w-full">
             <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
-              <div className="text-5xl text-white font-bold pt-10">Contact Us!</div>
+              <div className="text-5xl text-white font-bold pt-10">
+                Contact Us!
+              </div>
             </div>
           </div>
         </div>
@@ -384,6 +392,46 @@ const Cover = () => {
           </div>
         </div>
       )}
+      {["/internship"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">
+                Internship
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {["/volunteer"].includes(router.pathname) && (
+        <div
+          className=" overflow-hidden justify-center flex"
+          style={{
+            backgroundImage: `url(${CoverImg})`,
+            backgroundSize: " cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+          }}
+        >
+          <div className="bg-black bg-opacity-0 w-full">
+            <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
+              <div className="text-5xl text-white font-bold pt-10">
+                Volunteer
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       {["/conference"].includes(router.pathname) && (
         <div
           className=" overflow-hidden justify-center flex"
@@ -438,7 +486,7 @@ const Cover = () => {
           <div className="bg-black bg-opacity-0 w-full">
             <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
               <div className="text-5xl text-white font-bold pt-10">
-               3rd Conference
+                3rd Conference
               </div>
             </div>
           </div>
@@ -458,7 +506,7 @@ const Cover = () => {
           <div className="bg-black bg-opacity-0 w-full">
             <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
               <div className="text-5xl text-white font-bold pt-10">
-               1st Panel Discussion
+                1st Panel Discussion
               </div>
             </div>
           </div>
@@ -478,7 +526,7 @@ const Cover = () => {
           <div className="bg-black bg-opacity-0 w-full">
             <div className="  max-w-6xl  m-auto h-[70vh] justify-center flex flex-col items-center">
               <div className="text-5xl text-white font-bold pt-10">
-               2nd Panel Discussion
+                2nd Panel Discussion
               </div>
             </div>
           </div>

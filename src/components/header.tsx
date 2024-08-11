@@ -14,7 +14,14 @@ export default function Header() {
   const [membersOpen, setMembersOpen] = useState(false);
   const [mediaOpen, setMediaOpen] = useState(false);
   const [mobile, setMobile] = useState(false);
+  const [opportunities, setOpportunities] = useState(false);
 
+  const handleMouseEnterOpportunities = () => {
+    setOpportunities(true);
+  };
+  const handleMouseLeaveOpportunities = () => {
+    setOpportunities(false);
+  };
   const handleMobileClose = () => {
     setMobile(false);
   };
@@ -121,7 +128,7 @@ export default function Header() {
                     <DropdownMenu.Content
                       onMouseLeave={handleMouseLeaveMedia}
                       onClick={handleMouseLeaveMedia}
-                      className="DropdownMenuContent bg-white  p-5"
+                      className="DropdownMenuContent bg-white rounded-md p-5"
                     >
                       <DropdownMenu.Item
                         key="1"
@@ -170,16 +177,48 @@ export default function Header() {
               >
                 Events
               </NavLink>
-              <NavLink
-                to="/available-jobs"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-[#007A33] text-lg font-bold   p-1 rounded-lg capitalize"
-                    : "text-black text-lg hover:text-[#C8102E] font-bold p-1 capitalize"
-                }
-              >
-                Jobs
-              </NavLink>
+              <div className="text-black text-lg hover:text-[#C8102E] font-bold p-1 capitalize outline-none">
+                <DropdownMenu.Root
+                  open={opportunities}
+                  onOpenChange={setOpportunities}
+                >
+                  <DropdownMenu.Trigger
+                    onClick={handleMouseEnterOpportunities}
+                    onMouseEnter={handleMouseEnterOpportunities}
+                  >
+                    <p>
+                      Opportunities <KeyboardArrowDownRoundedIcon />
+                    </p>
+                  </DropdownMenu.Trigger>
+                  <DropdownMenu.Portal>
+                    <DropdownMenu.Content
+                      onMouseLeave={handleMouseLeaveOpportunities}
+                      onClick={handleMouseLeaveOpportunities}
+                      className="DropdownMenuContent bg-white rounded-md p-5"
+                    >
+                      <DropdownMenu.Item
+                        key="1"
+                        className="hover:text-red-600 font-semibold pt-2"
+                      >
+                        <Link to="/volunteer">Volunteer</Link>
+                      </DropdownMenu.Item>
+                      <DropdownMenu.Item
+                        key="2"
+                        className="hover:text-red-600 font-semibold pt-2"
+                      >
+                        <Link to="/internship">Internship</Link>
+                      </DropdownMenu.Item>
+                      <DropdownMenu.Item
+                        key="3"
+                        className="hover:text-red-600 font-semibold pt-2"
+                      >
+                        <Link to="/available-jobs">Available Jobs</Link>
+                      </DropdownMenu.Item>
+                    </DropdownMenu.Content>
+                  </DropdownMenu.Portal>
+                </DropdownMenu.Root>
+              </div>
+
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
@@ -351,15 +390,51 @@ export default function Header() {
                     </Link>
                   </DropdownMenu.Item>
                   <div className="border w-[100%] border-red-800  opacity-80"></div>
-                  <DropdownMenu.Item className="DropdownMenuItem" disabled>
-                    <Link
-                      to="available-jobs"
-                      onClick={handleMobileClose}
-                      className="text-black  hover:text-[#25554D] font-normal text-md"
-                    >
-                      Jobs
-                    </Link>
-                  </DropdownMenu.Item>
+                  <DropdownMenu.Sub>
+                    <DropdownMenu.SubTrigger className="DropdownMenuSubTrigger">
+                      <p className="text-black hover:cursor-pointer hover:text-[#25554D] font-normal text-md">
+                        Opportunities <KeyboardArrowDownRoundedIcon />
+                      </p>
+                    </DropdownMenu.SubTrigger>
+                    <DropdownMenu.Portal>
+                      <DropdownMenu.SubContent
+                        className="DropdownMenuSubContent  bg-white p-5 rounded-md"
+                        sideOffset={2}
+                        alignOffset={-5}
+                      >
+                        <DropdownMenu.Item
+                          key="1"
+                          className="hover:text-red-600 font-semibold pt-2"
+                        >
+                          <Link to="/volunteer" onClick={handleMobileClose}>
+                            Volunteer
+                          </Link>
+                        </DropdownMenu.Item>
+
+                        <div className="border w-[100%] border-red-800  opacity-80"></div>
+                        <DropdownMenu.Item
+                          key="2"
+                          className="hover:text-red-600 font-semibold pt-2"
+                        >
+                          <Link to="/internship" onClick={handleMobileClose}>
+                            Internship
+                          </Link>
+                        </DropdownMenu.Item>
+                        <div className="border w-[100%] border-red-800  opacity-80"></div>
+                        <DropdownMenu.Item
+                          key="3"
+                          className="hover:text-red-600 font-semibold pt-2"
+                        >
+                          <Link
+                            to="/available-jobs"
+                            onClick={handleMobileClose}
+                          >
+                            Available Jobs
+                          </Link>
+                        </DropdownMenu.Item>
+                      </DropdownMenu.SubContent>
+                    </DropdownMenu.Portal>
+                  </DropdownMenu.Sub>
                   <div className="border w-[100%] border-red-800  opacity-80"></div>
                   <DropdownMenu.Item className="DropdownMenuItem" disabled>
                     <Link

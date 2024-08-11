@@ -10,7 +10,7 @@ type BoxProps = {
   box_styling: string;
   description_styling: string;
   button_styling: string;
-  button_text:string;
+  button_text:any;
 };
 export default function BoxHomepage({
   title,

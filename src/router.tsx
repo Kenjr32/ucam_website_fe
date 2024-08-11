@@ -15,12 +15,14 @@ import Partners from "./pages/partners";
 import Resources from "./pages/resources";
 import Trustees from "./pages/trustees";
 import Conference1 from "./pages/event/conference";
-import Conference3 from "./pages/event/conference3"
+import Conference3 from "./pages/event/conference3";
 import Scholars from "./pages/event/scholars";
 import Discussion from "./pages/event/discussion";
 import Discussion2 from "./pages/event/discussion2";
 import Fundraising from "./pages/event/fundraising";
 import Funding from "./pages/event/funding";
+import Internship from "./pages/internship";
+import Volunteer from "./pages/volunteer";
 const Router = createHashRouter([
   {
     path: "/",
@@ -81,6 +83,14 @@ const Router = createHashRouter([
         element: <Jobs />,
       },
       {
+        path: "internship",
+        element: <Internship />,
+      },
+      {
+        path: "volunteer",
+        element: <Volunteer />,
+      },
+      {
         path: "conference",
         element: <Conference1 />,
       },
@@ -102,7 +112,7 @@ const Router = createHashRouter([
       },
       {
         path: "event-fundraising",
-        element: <Fundraising/>,
+        element: <Fundraising />,
       },
       {
         path: "event-maximizing-funding",
