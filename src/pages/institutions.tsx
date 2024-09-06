@@ -259,6 +259,7 @@ const PrivateUni = [
     desc: "Accredited",
     image: LAMAU,
     website: "https://lamau.edu.mw/",
+    paid: true,
   },
   {
     id: 24,
@@ -340,10 +341,7 @@ export default function Institutions() {
                           </div> */}
                           {item.paid ? (
                             <div className=" items-center flex justify-center mb-2 text-white ">
-                              <div
-                                className="w-36  bg-green-500 text-center rounded-md p-2"
-                              
-                              >
+                              <div className="w-36  bg-green-500 text-center rounded-md p-2">
                                 Paid Member
                               </div>
                             </div>
@@ -417,10 +415,7 @@ export default function Institutions() {
                           </div> */}
                           {item.paid ? (
                             <div className=" items-center flex justify-center mb-2 text-white ">
-                              <div
-                                className="w-36  bg-green-500 text-center rounded-md p-2"
-                              
-                              >
+                              <div className="w-36  bg-green-500 text-center rounded-md p-2">
                                 Paid Member
                               </div>
                             </div>

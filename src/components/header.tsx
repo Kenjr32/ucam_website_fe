@@ -7,7 +7,7 @@ import Image from "../components/image/image";
 import { useState } from "react";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import Banner from "./banner";
+
 export default function Header() {
   //const [lang, setLang] = useState("En");
 
@@ -450,7 +450,7 @@ export default function Header() {
             </DropdownMenu.Root>
           </div>
         </nav>
-        <Banner />
+
       </header>
     </>
   );
